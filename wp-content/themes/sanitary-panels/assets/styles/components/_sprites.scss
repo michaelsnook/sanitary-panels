@@ -1,0 +1,94 @@
+$sprites: '/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png';
+
+header {
+  h1.title {
+    display: block;
+    width: 590px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url($sprites);
+    background-size: 976px 600px;
+    background-position: -208px -39px;
+  }
+  .brand {
+    display: block;
+    width: 114px;
+    height: 200px;
+    background-image: url($sprites);
+    background-size: 651px 400px;
+    background-position: -4px -12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+nav {
+  &.nav-primary ul.nav>li>a {
+    color: transparent;
+    border-radius: 0;
+    height: 100%;
+    margin-left: 5px;
+  }
+  .sprite {
+    display: block;
+    border: 1px solid transparent;
+    -webkit-transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    // TODO: discuss more compatible transitions
+    &:hover {
+      margin-top: -8px;
+    }
+  }
+  .sprite {
+    background-image: url($sprites);
+    background-size: 651px 400px;
+    width: 90px;
+    height: 80px;
+    color: transparent;
+    border-radius: 0;
+  }
+  .sprite-small {
+    @extend .sprite;
+    width: 120px;
+  }
+  .sprite-square {
+    @extend .sprite;
+    width: 72px;
+    height: 64px;
+    background-size: 521px 320px;
+  }
+  .sprite-first {
+    @extend .sprite-square;
+    background-position: -29px 132px;
+  }
+  .sprite-prev {
+    @extend .sprite-square;
+    background-position: -98px 132px;
+  }
+  .sprite-random {
+    @extend .sprite-square;
+    background-position: -179px 132px;
+  }
+  .sprite-next {
+    @extend .sprite-square;
+    background-position: -258px 132px;
+  }
+  .sprite-last {
+    @extend .sprite-square;
+    background-position: -328px 132px;
+  }
+  .sprite-about>a {
+    @extend .sprite-small;
+    background-position: -124px 275px;
+    width: 90px;
+  }
+  .sprite-archive>a {
+    @extend .sprite-small;
+    background-position: -370px 278px;
+  }
+  .sprite-store>a {
+    @extend .sprite-small;
+    background-position: -203px 277px;
+    width: 100px;
+  }
+}

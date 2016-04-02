@@ -1,0 +1,106 @@
+@import "common/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+//@import "components/grid";
+@import "components/wp-classes";
+@import "components/sprites";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+$background-color: black;
+
+body {
+  font-size: 18px;
+  background-color: $background-color;
+  background: url('/wp-content/themes/sanitary-panels/dist/images/black-bg.png') repeat;
+  background-size: 27%;
+}
+header, section {
+  background-color: white;
+  nav.nav-primary {
+    ul.nav {
+      @extend .nav-pills;
+      background-color: transparent;
+      & > li > a:hover { background-color: transparent; }
+      width: 335px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  &.footer {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .sidebar {
+      @extend .text-muted;
+      .widget_search {
+        @extend .pull-right, .text-right;
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+      .widget {
+        display: none;
+      }
+      .widget_archive, .widget_search {
+        @extend .col-sm-6; display: block;
+        ul {
+          @extend .list-unstyled;
+        }
+      }
+    }
+  }
+}
+main.main {
+  padding-bottom: 20px;
+  .single-format-image & h1.entry-title, .single-format-image & p.byline { display: none; }
+  figcaption {
+    font-size: 15px;
+    text-align: left;
+    @extend .text-muted;
+  }
+  time {
+    @extend .text-muted;
+    font-style: italic;
+    display: none;
+  }
+  .single-format-image & {
+    @extend .text-center;
+    .wp-caption { border: 0px solid transparent; }
+  }
+  .btn-group {
+    min-height: 64px;
+  }
+}
+nav.sprites {
+  @extend .text-center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 74px;
+  a, a:hover, a:visited, a:active, a:focus {
+    color: transparent;
+    border-radius: 4px;
+    margin: 5px;
+    float: left;
+    display: inline-block;
+  }
+  a:hover { margin-top: 0; border-color: black; }
+}
