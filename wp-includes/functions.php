@@ -145,7 +145,7 @@ function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
 	 * Filter the date formatted based on the locale.
 	 *
 	 * @since 2.8.0
-	 * 
+	 *
 	 * @param string $j          Formatted date string.
 	 * @param string $req_format Format to display the date.
 	 * @param int    $i          Unix timestamp.
@@ -4121,8 +4121,8 @@ function wp_allowed_protocols() {
 
 		/**
 		 * Filter the list of protocols allowed in HTML attributes.
-		 * 
-		 * @since 3.0.0 
+		 *
+		 * @since 3.0.0
 		 *
 		 * @param array $protocols Array of allowed protocols e.g. 'http', 'ftp', 'tel', and more.
 		 */
@@ -4443,4 +4443,22 @@ function mbstring_binary_safe_encoding( $reset = false ) {
  */
 function reset_mbstring_encoding() {
 	mbstring_binary_safe_encoding( true );
+}
+
+add_filter('next_post_link', 'next_link_attributes');
+add_filter('previous_post_link', 'prev_link_attributes');
+
+function next_link_attributes($output) {
+    $code = 'class="sprite-next"';
+		if (!$output) {
+			return '<a class="sprite-next" href="#">';
+		}
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+function prev_link_attributes($output) {
+    $code = 'class="sprite-prev"';
+		if (!$output) {
+			return '<a class="sprite-prev" href="#">';
+		}
+		return str_replace('<a href=', '<a '.$code.' href=', $output);
 }

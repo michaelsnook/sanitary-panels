@@ -5,25 +5,34 @@
       <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-content">
+      <?php if ( in_category( 'comics' )) { ?>
       <div class="col-sm-12 text-center">
         <nav class="sprites">
           <a class="sprite-first">first</a>
-          <a class="sprite-prev">previous</a>
+          <?php previous_post_link( '%link', 'previous', $in_same_term = true, $taxonomy = 'category' ); ?>
+
           <a class="sprite-random" href="/random/">random</a>
-          <a class="sprite-next">next</a>
+          <?php next_post_link( '%link', 'next', $in_same_term = true, $taxonomy = 'category' ); ?>
+
           <a class="sprite-last">last</a>
         </nav>
       </div>
+      <?php } ?>
       <?php the_content(); ?>
+
+      <?php if ( in_category( 'comics' )) { ?>
       <div class="col-sm-12 text-center">
         <nav class="sprites">
           <a class="sprite-first">first</a>
-          <a class="sprite-prev">previous</a>
+          <?php previous_post_link( '%link', 'previous', $in_same_term = true, $taxonomy = 'category' ); ?>
+
           <a class="sprite-random" href="/random/">random</a>
-          <a class="sprite-next">next</a>
+          <?php next_post_link( '%link', 'next', $in_same_term = true, $taxonomy = 'category' ); ?>
+
           <a class="sprite-last">last</a>
         </nav>
       </div>
+      <?php } ?>
     </div>
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sanitary-panels'), 'after' => '</p></nav>']); ?>
