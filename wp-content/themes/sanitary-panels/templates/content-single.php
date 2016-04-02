@@ -9,7 +9,7 @@
         <nav class="sprites">
           <a class="sprite-first">first</a>
           <a class="sprite-prev">previous</a>
-          <a class="sprite-random">random</a>
+          <a class="sprite-random" href="/random/">random</a>
           <a class="sprite-next">next</a>
           <a class="sprite-last">last</a>
         </nav>
@@ -19,14 +19,14 @@
         <nav class="sprites">
           <a class="sprite-first">first</a>
           <a class="sprite-prev">previous</a>
-          <a class="sprite-random">random</a>
+          <a class="sprite-random" href="/random/">random</a>
           <a class="sprite-next">next</a>
           <a class="sprite-last">last</a>
         </nav>
       </div>
     </div>
     <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sanitary-panels'), 'after' => '</p></nav>']); ?>
     </footer>
     <?php comments_template('/templates/comments.php'); ?>
   </article>
