@@ -7,7 +7,7 @@
     <div class="entry-content">
       <?php if ( in_category( 'comics' )) { ?>
       <div class="col-sm-12 text-center">
-        <nav class="sprites">
+        <nav class="sprites above">
           <a class="sprite-first">first</a>
           <?php previous_post_link( '%link', 'previous', $in_same_term = true, $taxonomy = 'category' ); ?>
 
@@ -18,11 +18,14 @@
         </nav>
       </div>
       <?php } ?>
-      <?php the_content(); ?>
+
+      <div id="the_content">
+        <?php the_content(); ?>
+      </div>
 
       <?php if ( in_category( 'comics' )) { ?>
       <div class="col-sm-12 text-center">
-        <nav class="sprites">
+        <nav class="sprites below">
           <a class="sprite-first">first</a>
           <?php previous_post_link( '%link', 'previous', $in_same_term = true, $taxonomy = 'category' ); ?>
 
@@ -33,10 +36,12 @@
         </nav>
       </div>
       <?php } ?>
-    </div>
-    <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sanitary-panels'), 'after' => '</p></nav>']); ?>
-    </footer>
+    </div><!-- .entry-content -->
+
+    <!--footer>
+      <?php //wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sanitary-panels'), 'after' => '</p></nav>']); ?>
+    </footer-->
+
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>

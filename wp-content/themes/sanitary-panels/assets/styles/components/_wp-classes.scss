@@ -33,6 +33,8 @@
 // Captions
 .wp-caption {
   @extend .thumbnail;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .wp-caption-text {
   padding: $thumbnail-caption-padding;
