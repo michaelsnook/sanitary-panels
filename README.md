@@ -1,8 +1,11 @@
-### Installing this Wordpress / Sanitary Panels Site Locally ###
+### Installing this Wordpress / Sanitary Panels Site Locally
 
 1. Set up a MySQL database called `wp_os_sp` and grant all privileges to user `wp_os_sp`
 1. `git clone git@github.com:michaelsnook/sanitary-panels.git`
 1. Run your MySQL server and point Apache at the `/sanitary-panels` folder you just cloned
+1. Install Wordpress, create users, add sample posts
+1. Set default post type to `image` and default category to `comics`
+1. Create a menu with items for "About", "Archive" and "Store", and give them the title attributes `sprite-about`, `sprite-archive` and `sprite-store`. (This activates some hacky styling found in `_sprites.css`. See screencap in `docs/`.)
 
 ### OpenShift WordPress Developer Quickstart  
 This quickstart is designed to allow you to push themes, plugins, and WordPress upgrades to your OpenShift gear using git.  Please note that this is a one way relationship.  If you install any themes or plugins on your OpenShift WordPress site, the next time you do a git push they will be gone.  All theme & plugin installations, and WordPress core upgrades should be done on your local development environment.  Then do a git add, git commit, and git push to move the changes to your OpenShift gear.  This quickstart is geared towards developers, only use it if you know what you are doing!!!!

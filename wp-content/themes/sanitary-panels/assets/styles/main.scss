@@ -91,6 +91,7 @@ main.main {
 }
 nav.sprites {
   @extend .text-center;
+  &.above { margin-top: 15px; }
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
