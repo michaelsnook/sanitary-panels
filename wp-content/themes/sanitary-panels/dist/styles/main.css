@@ -5898,6 +5898,12 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+body {
+  font-size: 18px;
+  background-color: black;
+  background: url("/wp-content/themes/sanitary-panels/dist/images/black-bg.png") repeat;
+  background-size: 27%; }
+
 .fb-comments, .fb-comments * {
   width: 100% !important; }
 
@@ -6005,12 +6011,6 @@ article.comic {
 
 body#tinymce {
   margin: 12px !important; }
-
-body {
-  font-size: 18px;
-  background-color: black;
-  background: url("/wp-content/themes/sanitary-panels/dist/images/black-bg.png") repeat;
-  background-size: 27%; }
 
 header, section {
   background-color: white; }
