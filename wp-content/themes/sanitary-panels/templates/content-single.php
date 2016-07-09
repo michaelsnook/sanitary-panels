@@ -10,9 +10,9 @@
       </div>
     </div><!-- .entry-content -->
 
-    <!--footer>
-      <?php //wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sanitary-panels'), 'after' => '</p></nav>']); ?>
-    </footer-->
+    <footer>
+      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sanitary-panels'), 'after' => '</p></nav>']); ?>
+    </footer>
 
     <?php comments_template('/templates/comments.php'); ?>
   </article>
