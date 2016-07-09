@@ -1,1 +1,6 @@
-
+body {
+  font-size: 18px;
+  background-color: $background-color;
+  background: url($background-image) repeat;
+  background-size: 27%;
+}

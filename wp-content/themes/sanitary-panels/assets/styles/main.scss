@@ -19,14 +19,7 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-$background-color: black;
 
-body {
-  font-size: 18px;
-  background-color: $background-color;
-  background: url('/wp-content/themes/sanitary-panels/dist/images/black-bg.png') repeat;
-  background-size: 27%;
-}
 header, section {
   background-color: white;
   nav.nav-primary {
