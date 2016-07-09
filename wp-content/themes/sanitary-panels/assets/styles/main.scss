@@ -70,19 +70,12 @@ section {
 }
 main.main {
   padding-bottom: 20px;
-  .single-format-image & h1.entry-title, .single-format-image & p.byline { display: none; }
   figcaption {
     font-size: 15px;
     text-align: left;
     @extend .text-muted;
   }
-  time {
-    @extend .text-muted;
-    font-style: italic;
-    display: none;
-  }
   .single-format-image & {
-    @extend .text-center;
     .wp-caption { border: 0px solid transparent; }
   }
   .btn-group {
@@ -90,7 +83,6 @@ main.main {
   }
 }
 nav.sprites {
-  @extend .text-center;
   &.above { margin-top: 15px; }
   display: inline-block;
   margin-left: auto;

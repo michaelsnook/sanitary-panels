@@ -1252,7 +1252,7 @@ mark,
 .text-right, section.footer .sidebar .widget_search {
   text-align: right; }
 
-.text-center, .single-format-image main.main, nav.sprites {
+.text-center {
   text-align: center; }
 
 .text-justify {
@@ -1270,7 +1270,7 @@ mark,
 .text-capitalize {
   text-transform: capitalize; }
 
-.text-muted, section.footer .sidebar, main.main figcaption, main.main time {
+.text-muted, section.footer .sidebar, main.main figcaption {
   color: #777777; }
 
 .text-primary {
@@ -5998,6 +5998,11 @@ nav a[title=sprite-store] {
   background-position: -203px 277px;
   width: 100px; }
 
+article.comic {
+  padding-top: 20px; }
+  article.comic header {
+    display: none; }
+
 body#tinymce {
   margin: 12px !important; }
 
@@ -6036,14 +6041,9 @@ section {
 
 main.main {
   padding-bottom: 20px; }
-  .single-format-image main.main h1.entry-title, .single-format-image main.main p.byline {
-    display: none; }
   main.main figcaption {
     font-size: 15px;
     text-align: left; }
-  main.main time {
-    font-style: italic;
-    display: none; }
   .single-format-image main.main .wp-caption {
     border: 0px solid transparent; }
   main.main .btn-group {
