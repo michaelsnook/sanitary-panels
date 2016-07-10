@@ -1,7 +1,11 @@
 <div class="col-sm-12 text-center">
 <nav class="sprites">
 
-  <a class="sprite-first" href="<?php echo get_bloginfo('wpurl'); ?>/first/">first</a>
+  <?php
+    $p = get_boundary_post( true, '', true, 'category' );
+    post_to_anchor_or_hash( $p, "sprite-first", "first" );
+  ?>
+
   <?php
     $p = get_previous_post(true);
     post_to_anchor_or_hash( $p, "sprite-prev", "prev" );
@@ -13,7 +17,9 @@
     post_to_anchor_or_hash( $p, "sprite-next", "next" );
   ?>
 
-  <a class="sprite-last" href="<?php echo get_bloginfo('wpurl'); ?>/last/">last</a>
-
+  <?php
+    $p = get_boundary_post( true, '', false, 'category' );
+    post_to_anchor_or_hash( $p, "sprite-last", "last" );
+  ?>
 </nav>
 </div>
