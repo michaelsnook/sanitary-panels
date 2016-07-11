@@ -50,3 +50,16 @@ function post_to_anchor_or_hash($p, $classnames = '', $rel = '', $text= '') {
   $payload_to_echo .= '</a>';
   echo $payload_to_echo;
 }
+
+// this section checks to see if the current page is the front page
+// if so, performs a 302 redirect to the most recent comic post
+
+add_action( 'template_redirect', 'last_comic_redirect' );
+
+function last_comic_redirect(){
+  if (is_front_page()) {
+    $posts = get_posts('numberposts=1&category_name=comics');
+    $post = $posts[0];
+    wp_redirect(get_post_permalink($post)); exit;
+  }
+}
