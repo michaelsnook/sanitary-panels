@@ -39,6 +39,10 @@ nav {
     &:hover {
       margin-top: $button-hover-lift-height;
     }
+    &[disabled] {
+      opacity: 0.5;
+      cursor: default;
+    }
   }
   .sprite {
     background-image: url($sprites);
