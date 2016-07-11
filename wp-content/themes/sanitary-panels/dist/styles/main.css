@@ -5972,6 +5972,9 @@ nav .sprite, nav .sprite-small, nav a[title=sprite-about], nav a[title=sprite-ar
   transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
   nav .sprite:hover, nav .sprite-small:hover, nav a[title=sprite-about]:hover, nav a[title=sprite-archive]:hover, nav a[title=sprite-store]:hover, nav .sprite-square:hover, nav .sprite-first:hover, nav .sprite-prev:hover, nav .sprite-random:hover, nav .sprite-next:hover, nav .sprite-last:hover {
     margin-top: -5px; }
+  nav .sprite[disabled], nav [disabled].sprite-small, nav a[disabled][title=sprite-about], nav a[disabled][title=sprite-archive], nav a[disabled][title=sprite-store], nav [disabled].sprite-square, nav [disabled].sprite-first, nav [disabled].sprite-prev, nav [disabled].sprite-random, nav [disabled].sprite-next, nav [disabled].sprite-last {
+    opacity: 0.5;
+    cursor: default; }
 nav .sprite, nav .sprite-small, nav a[title=sprite-about], nav a[title=sprite-archive], nav a[title=sprite-store], nav .sprite-square, nav .sprite-first, nav .sprite-prev, nav .sprite-random, nav .sprite-next, nav .sprite-last {
   background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png");
   background-size: 651px 400px;
