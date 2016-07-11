@@ -1106,7 +1106,7 @@ img {
   height: auto; }
 
 .img-rounded {
-  border-radius: 6px; }
+  border-radius: 10px; }
 
 .img-thumbnail {
   padding: 4px;
@@ -2685,7 +2685,7 @@ select[multiple].input-sm,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 6px; }
+  border-radius: 10px; }
 
 select.input-lg, .input-group-lg > select.form-control, .search-form .input-group-lg > select.search-field,
 .input-group-lg > select.input-group-addon,
@@ -2711,7 +2711,7 @@ select[multiple].input-lg,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 6px; }
+  border-radius: 10px; }
 .form-group-lg select.form-control, .form-group-lg .search-form select.search-field, .search-form .form-group-lg select.search-field {
   height: 46px;
   line-height: 46px; }
@@ -3162,7 +3162,7 @@ a.btn.disabled, .search-form a.disabled.search-submit, fieldset[disabled] a.btn,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
-  border-radius: 6px; }
+  border-radius: 10px; }
 
 .btn-sm, .btn-group-sm > .btn, .search-form .btn-group-sm > .search-submit {
   padding: 5px 10px;
@@ -3584,7 +3584,7 @@ tbody.collapse.in {
   .search-form .input-group-lg > .input-group-btn > .input-group-addon.search-submit {
     padding: 10px 16px;
     font-size: 18px;
-    border-radius: 6px; }
+    border-radius: 10px; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
@@ -4232,12 +4232,12 @@ tbody.collapse.in {
   line-height: 1.33333; }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px; }
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px; }
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px; }
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px; }
 
 .pagination-sm > li > a,
 .pagination-sm > li > span {
@@ -4394,7 +4394,7 @@ a.badge:hover, a.badge:focus {
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
   .container .jumbotron, .container-fluid .jumbotron {
-    border-radius: 6px;
+    border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px; }
   .jumbotron .container {
@@ -5119,7 +5119,7 @@ button.list-group-item-danger {
 
 .well-lg {
   padding: 24px;
-  border-radius: 6px; }
+  border-radius: 10px; }
 
 .well-sm {
   padding: 9px;
@@ -5191,7 +5191,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -5400,7 +5400,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
   .popover.top {
@@ -5418,7 +5418,7 @@ button.close {
   font-size: 14px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0; }
+  border-radius: 9px 9px 0 0; }
 
 .popover-content {
   padding: 9px 14px; }
@@ -5903,6 +5903,9 @@ body {
   background-color: black;
   background: url("/wp-content/themes/sanitary-panels/dist/images/black-bg.png") repeat;
   background-size: 27%; }
+
+a.addthis_counter.addthis_bubble_style {
+  display: table !important; }
 
 .fb-comments, .fb-comments * {
   width: 100% !important; }
