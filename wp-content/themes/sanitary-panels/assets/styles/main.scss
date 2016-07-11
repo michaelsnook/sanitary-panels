@@ -20,8 +20,9 @@
 @import "layouts/tinymce";
 
 
-header, section {
+header div.container {
   background-color: white;
+  border-radius: 0 0 10px 10px;
   nav.nav-primary {
     ul.nav {
       @extend .nav-pills;
@@ -34,6 +35,7 @@ header, section {
   }
 }
 section {
+  background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
