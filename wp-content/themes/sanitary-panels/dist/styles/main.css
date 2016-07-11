@@ -3697,13 +3697,13 @@ tbody.collapse.in {
       border-bottom-color: transparent;
       cursor: default; }
 
-.nav-pills > li, header nav.nav-primary ul.nav > li, section nav.nav-primary ul.nav > li {
+.nav-pills > li, header div.container nav.nav-primary ul.nav > li {
   float: left; }
-  .nav-pills > li > a, header nav.nav-primary ul.nav > li > a, section nav.nav-primary ul.nav > li > a {
+  .nav-pills > li > a, header div.container nav.nav-primary ul.nav > li > a {
     border-radius: 4px; }
-  .nav-pills > li + li, header nav.nav-primary ul.nav > li + li, section nav.nav-primary ul.nav > li + li {
+  .nav-pills > li + li, header div.container nav.nav-primary ul.nav > li + li {
     margin-left: 2px; }
-  .nav-pills > li.active > a, header nav.nav-primary ul.nav > li.active > a, section nav.nav-primary ul.nav > li.active > a, .nav-pills > li.active > a:hover, header nav.nav-primary ul.nav > li.active > a:hover, section nav.nav-primary ul.nav > li.active > a:hover, .nav-pills > li.active > a:focus, header nav.nav-primary ul.nav > li.active > a:focus, section nav.nav-primary ul.nav > li.active > a:focus {
+  .nav-pills > li.active > a, header div.container nav.nav-primary ul.nav > li.active > a, .nav-pills > li.active > a:hover, header div.container nav.nav-primary ul.nav > li.active > a:hover, .nav-pills > li.active > a:focus, header div.container nav.nav-primary ul.nav > li.active > a:focus {
     color: #fff;
     background-color: #27ae60; }
 
@@ -4363,14 +4363,14 @@ a.label:hover, a.label:focus {
   .btn-xs .badge, .btn-group-xs > .btn .badge, .search-form .btn-group-xs > .search-submit .badge, .btn-group-xs > .btn .badge, .search-form .btn-group-xs > .search-submit .badge {
     top: 0;
     padding: 1px 5px; }
-  .list-group-item.active > .badge, .nav-pills > .active > a > .badge, header nav.nav-primary ul.nav > .active > a > .badge, section nav.nav-primary ul.nav > .active > a > .badge {
+  .list-group-item.active > .badge, .nav-pills > .active > a > .badge, header div.container nav.nav-primary ul.nav > .active > a > .badge {
     color: #27ae60;
     background-color: #fff; }
   .list-group-item > .badge {
     float: right; }
   .list-group-item > .badge + .badge {
     margin-right: 5px; }
-  .nav-pills > li > a > .badge, header nav.nav-primary ul.nav > li > a > .badge, section nav.nav-primary ul.nav > li > a > .badge {
+  .nav-pills > li > a > .badge, header div.container nav.nav-primary ul.nav > li > a > .badge {
     margin-left: 3px; }
 
 a.badge:hover, a.badge:focus {
@@ -6015,17 +6015,19 @@ article.comic {
 body#tinymce {
   margin: 12px !important; }
 
-header, section {
-  background-color: white; }
-  header nav.nav-primary ul.nav, section nav.nav-primary ul.nav {
+header div.container {
+  background-color: white;
+  border-radius: 0 0 10px 10px; }
+  header div.container nav.nav-primary ul.nav {
     background-color: transparent;
     width: 335px;
     margin-left: auto;
     margin-right: auto; }
-    header nav.nav-primary ul.nav > li > a:hover, section nav.nav-primary ul.nav > li > a:hover {
+    header div.container nav.nav-primary ul.nav > li > a:hover {
       background-color: transparent; }
 
 section {
+  background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px; }
