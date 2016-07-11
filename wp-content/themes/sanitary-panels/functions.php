@@ -36,9 +36,10 @@ unset($file, $filepath);
 // * $rel: add rel attribute with e.g. 'prev'
 
 function post_to_anchor_or_hash($p, $classnames = '', $rel = '', $text= '') {
+  if (is_array($p)) $p = $p[0];
   $payload_to_echo = '<a';
   if ($classnames) $payload_to_echo .= ' class="' . $classnames . '"';
-  if ($p) {
+  if ($p && get_the_ID() != $p->ID) {
     $payload_to_echo .= ' href="' . get_permalink($p) . '"';
     if ($rel) $payload_to_echo .= ' rel="' . $rel . '"';
     $payload_to_echo .= '>';
