@@ -1,24 +1,28 @@
 $sprites: '/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png';
 $button-hover-lift-height: -5px;
 
+$sprites-multiplier: 1;
+$title-multiplier: 1;
+$logo-multiplier: 1;
+
 header {
   h1.title {
     display: block;
-    width: 590px;
-    height: 100px;
+    width: $title-multiplier * 590px;
+    height: $title-multiplier * 100px;
     margin-left: auto;
     margin-right: auto;
     background-image: url($sprites);
-    background-size: 976px 600px;
-    background-position: -208px -39px;
+    background-size: ($title-multiplier * 976px) ($title-multiplier * 600px);
+    background-position: ($title-multiplier * -208px) ($title-multiplier * -39px);
   }
   .brand {
     display: block;
-    width: 114px;
-    height: 200px;
+    width: $logo-multiplier * 114px;
+    height: $logo-multiplier * 200px;
     background-image: url($sprites);
-    background-size: 651px 400px;
-    background-position: -4px -12px;
+    background-size: ($logo-multiplier * 651px) ($logo-multiplier * 400px);
+    background-position: ($logo-multiplier * -4px) ($logo-multiplier * -12px);
     margin-left: auto;
     margin-right: auto;
   }
@@ -26,9 +30,9 @@ header {
 nav {
   &.nav-primary ul.nav>li>a {
     color: transparent;
-    border-radius: 0;
+    // border-radius: 0;
     height: 100%;
-    margin-left: 5px;
+    // margin-left: 5px;
   }
   .sprite {
     display: block;
@@ -46,54 +50,54 @@ nav {
   }
   .sprite {
     background-image: url($sprites);
-    background-size: 651px 400px;
-    width: 90px;
-    height: 80px;
+    background-size: ($sprites-multiplier * 651px) ($sprites-multiplier * 400px);
+    width: $sprites-multiplier * 90px;
+    height: $sprites-multiplier * 80px;
     color: transparent;
     border-radius: 0;
   }
   .sprite-small {
     @extend .sprite;
-    width: 120px;
+    width: $sprites-multiplier * 120px;
   }
   .sprite-square {
     @extend .sprite;
-    width: 72px;
-    height: 64px;
-    background-size: 521px 320px;
+    width: $sprites-multiplier * 72px;
+    height: $sprites-multiplier * 64px;
+    background-size: ($sprites-multiplier * 521px) ($sprites-multiplier * 320px);
   }
   .sprite-first {
     @extend .sprite-square;
-    background-position: -29px 132px;
+    background-position: ($sprites-multiplier * -29px) ($sprites-multiplier * 132px);
   }
   .sprite-prev {
     @extend .sprite-square;
-    background-position: -98px 132px;
+    background-position: ($sprites-multiplier * -98px) ($sprites-multiplier * 132px);
   }
   .sprite-random {
     @extend .sprite-square;
-    background-position: -179px 132px;
+    background-position: ($sprites-multiplier * -179px) ($sprites-multiplier * 132px);
   }
   .sprite-next {
     @extend .sprite-square;
-    background-position: -258px 132px;
+    background-position: ($sprites-multiplier * -258px) ($sprites-multiplier * 132px);
   }
   .sprite-last {
     @extend .sprite-square;
-    background-position: -328px 132px;
+    background-position: ($sprites-multiplier * -328px) ($sprites-multiplier * 132px);
   }
   a[title=sprite-about] {
     @extend .sprite-small;
-    background-position: -124px 275px;
-    width: 90px;
+    background-position: ($sprites-multiplier * -124px) ($sprites-multiplier * 275px);
+    width: $sprites-multiplier * 90px;
   }
   a[title=sprite-archive] {
     @extend .sprite-small;
-    background-position: -370px 278px;
+    background-position: ($sprites-multiplier * -370px) ($sprites-multiplier * 278px);
   }
   a[title=sprite-store] {
     @extend .sprite-small;
-    background-position: -203px 277px;
-    width: 100px;
+    background-position: ($sprites-multiplier * -203px) ($sprites-multiplier * 277px);
+    width: $sprites-multiplier * 100px;
   }
 }
