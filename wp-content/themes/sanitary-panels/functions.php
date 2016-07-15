@@ -58,8 +58,8 @@ add_action( 'template_redirect', 'last_comic_redirect' );
 
 function last_comic_redirect(){
   if (is_front_page()) {
-    $posts = get_posts('numberposts=1&category_name=comics');
+    $posts = get_posts('posts_per_page=1&category_name=comics&suppress_filters=false');
     $post = $posts[0];
-    wp_redirect(get_post_permalink($post)); exit;
+    wp_safe_redirect(get_permalink($post)); exit;
   }
 }
