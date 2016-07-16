@@ -1,7 +1,7 @@
 $sprites: '/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png';
 $button-hover-lift-height: -5px;
 
-$sprites-multiplier: 1;
+$sprites-multiplier: 0.4;
 $title-multiplier: 1;
 $logo-multiplier: 1;
 
@@ -33,6 +33,20 @@ nav {
     // border-radius: 0;
     height: 100%;
     // margin-left: 5px;
+  }
+  &.sprites {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: $sprites-multiplier * 74px;
+    a {
+      color: transparent;
+      border-radius: $border-radius-base;
+      margin: 5px;
+      float: left;
+      display: inline-block;
+    }
+    a:hover { margin-top: 0; }
   }
   .sprite {
     display: block;

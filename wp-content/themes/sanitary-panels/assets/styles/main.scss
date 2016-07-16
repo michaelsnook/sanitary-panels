@@ -28,50 +28,12 @@ body>#background-washout {
     background-color: rgba(0, 0, 0, 0.65);
     z-index: -1;
 }
-// TODO: ACTUALLY FIND THE TEMPLATE AND ADD THIS DIV DIRECTLY AFTER BODY TAG
 
-header div.container {
-  background-color: white;
-  border-radius: 0 0 $border-radius-large $border-radius-large;
-  nav.nav-primary {
-    ul.nav {
-      @extend .nav-pills;
-      background-color: transparent;
-      & > li > a:hover { background-color: transparent; }
-      width: 335px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
 section {
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: $border-radius-large;
-  &.footer {
-    margin-bottom: 0;
-    border-radius: $border-radius-large $border-radius-large 0 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    .sidebar {
-      @extend .text-muted;
-      .widget_search {
-        @extend .pull-right, .text-right;
-        padding-top: 2em;
-        padding-bottom: 2em;
-      }
-      .widget {
-        display: none;
-      }
-      .widget_archive, .widget_search {
-        @extend .col-sm-6; display: block;
-        ul {
-          @extend .list-unstyled;
-        }
-      }
-    }
-  }
 }
 main.main {
   padding-bottom: 20px;
@@ -80,25 +42,8 @@ main.main {
     text-align: left;
     @extend .text-muted;
   }
-  .single-format-image & {
-    .wp-caption { border: 0px solid transparent; }
-  }
-  .btn-group {
-    min-height: 64px;
-  }
 }
-nav.sprites {
-  &.above { margin-top: 15px; }
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 74px;
-  a {
-    color: transparent;
-    border-radius: $border-radius-base;
-    margin: 5px;
-    float: left;
-    display: inline-block;
-  }
-  a:hover { margin-top: 0; }
+main.main .btn-group {
+//  min-height: 64px;
 }
+nav.above { margin-top: 15px;}

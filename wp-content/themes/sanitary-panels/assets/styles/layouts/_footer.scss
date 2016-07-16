@@ -1,0 +1,23 @@
+section.footer {
+  margin-bottom: 0;
+  border-radius: $border-radius-large $border-radius-large 0 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .sidebar {
+    @extend .text-muted;
+    .widget_search {
+      @extend .pull-right, .text-right;
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    .widget {
+      display: none;
+    }
+    .widget_archive, .widget_search {
+      @extend .col-sm-6; display: block;
+      ul {
+        @extend .list-unstyled;
+      }
+    }
+  }
+}
