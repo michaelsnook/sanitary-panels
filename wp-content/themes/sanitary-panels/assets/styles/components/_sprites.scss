@@ -1,41 +1,42 @@
 $sprites: '/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png';
 $button-hover-lift-height: -5px;
 
-$sprites-multiplier: 0.4;
+$sprites-multiplier: 1;
 $title-multiplier: 1;
 $logo-multiplier: 1;
+
+$k: 100px;
+$h: 7.83vw; // k for header items like logo and banner title
 
 header {
   h1.title {
     display: block;
-    width: $title-multiplier * 590px;
-    height: $title-multiplier * 100px;
+    width: $title-multiplier * $h * 5.9;
+    height: $title-multiplier * $h * 1;
     margin-left: auto;
     margin-right: auto;
     background-image: url($sprites);
-    background-size: ($title-multiplier * 976px) ($title-multiplier * 600px);
-    background-position: ($title-multiplier * -208px) ($title-multiplier * -39px);
+    background-size: ($title-multiplier * $h * 9.76) ($title-multiplier * $h * 6);
+    background-position: ($title-multiplier * $h * -2.08) ($title-multiplier * $h * -0.39);
   }
   .brand {
     display: block;
-    width: $logo-multiplier * 114px;
-    height: $logo-multiplier * 200px;
+    width: $logo-multiplier * $h * 1.14;
+    height: $logo-multiplier * $h * 2;
     background-image: url($sprites);
-    background-size: ($logo-multiplier * 651px) ($logo-multiplier * 400px);
-    background-position: ($logo-multiplier * -4px) ($logo-multiplier * -12px);
+    background-size: ($logo-multiplier * $h * 6.51) ($logo-multiplier * $h * 4);
+    background-position: ($logo-multiplier * $h * -0.04) ($logo-multiplier * $h * -0.12);
     margin-left: auto;
     margin-right: auto;
   }
 }
 nav {
-  &.nav-primary ul.nav>li>a {
-    //color: transparent;
-  }
+
   &.sprites {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    min-height: $sprites-multiplier * 74px;
+    min-height: $sprites-multiplier * $k * 0.74;
     a {
       color: transparent;
       border-radius: $border-radius-base;
@@ -61,57 +62,57 @@ nav {
   }
   .sprite {
     background-image: url($sprites);
-    background-size: ($sprites-multiplier * 651px) ($sprites-multiplier * 400px);
-    width: $sprites-multiplier * 90px;
-    height: $sprites-multiplier * 80px;
+    background-size: ($sprites-multiplier * $k * 6.51) ($sprites-multiplier * $k * 4);
+    width: $sprites-multiplier * $k * 0.9;
+    height: $sprites-multiplier * $k * 0.8;
     color: transparent;
     border-radius: 0;
   }
   .sprite-small {
     @extend .sprite;
-    width: $sprites-multiplier * 120px;
+    width: $sprites-multiplier * $k * 1.2;
   }
   .sprite-square {
     @extend .sprite;
-    width: $sprites-multiplier * 72px;
-    height: $sprites-multiplier * 64px;
-    background-size: ($sprites-multiplier * 521px) ($sprites-multiplier * 320px);
+    width: $sprites-multiplier * $k * 0.72;
+    height: $sprites-multiplier * $k * 0.64;
+    background-size: ($sprites-multiplier * $k * 5.21) ($sprites-multiplier * $k * 3.2);
   }
   .sprite-first {
     @extend .sprite-square;
-    background-position: ($sprites-multiplier * -29px) ($sprites-multiplier * 132px);
+    background-position: ($sprites-multiplier * $k * -0.29) ($sprites-multiplier * $k * 1.32);
   }
   .sprite-prev {
     @extend .sprite-square;
-    background-position: ($sprites-multiplier * -98px) ($sprites-multiplier * 132px);
+    background-position: ($sprites-multiplier * $k * -0.98) ($sprites-multiplier * $k * 1.32);
   }
   .sprite-random {
     @extend .sprite-square;
-    background-position: ($sprites-multiplier * -179px) ($sprites-multiplier * 132px);
+    background-position: ($sprites-multiplier * $k * -1.79) ($sprites-multiplier * $k * 1.32);
   }
   .sprite-next {
     @extend .sprite-square;
-    background-position: ($sprites-multiplier * -258px) ($sprites-multiplier * 132px);
+    background-position: ($sprites-multiplier * $k * -2.58) ($sprites-multiplier * $k * 1.32);
   }
   .sprite-last {
     @extend .sprite-square;
-    background-position: ($sprites-multiplier * -328px) ($sprites-multiplier * 132px);
+    background-position: ($sprites-multiplier * $k * -3.28) ($sprites-multiplier * $k * 1.32);
   }
   a[title=sprite-about] {
     @extend .sprite-small;
-    background-position: ($sprites-multiplier * -124px) ($sprites-multiplier * 275px);
-    width: $sprites-multiplier * 90px;
-    height: $sprites-multiplier * 55px;
+    background-position: ($sprites-multiplier * $k * -1.24) ($sprites-multiplier * $k * 2.75);
+    width: $sprites-multiplier * $k * 0.90;
+    height: $sprites-multiplier * $k * 0.55;
   }
   a[title=sprite-archive] {
     @extend .sprite-small;
-    background-position: ($sprites-multiplier * -370px) ($sprites-multiplier * 278px);
-    height: $sprites-multiplier * 55px;
+    background-position: ($sprites-multiplier * $k * -3.7) ($sprites-multiplier * $k * 2.78);
+    height: $sprites-multiplier * $k * 0.55;
   }
   a[title=sprite-store] {
     @extend .sprite-small;
-    background-position: ($sprites-multiplier * -203px) ($sprites-multiplier * 277px);
-    width: $sprites-multiplier * 100px;
-    height: $sprites-multiplier * 55px;
+    background-position: ($sprites-multiplier * $k * -2.03) ($sprites-multiplier * $k * 2.77);
+    width: $sprites-multiplier * $k * 1;
+    height: $sprites-multiplier * $k * 0.55;
   }
 }
