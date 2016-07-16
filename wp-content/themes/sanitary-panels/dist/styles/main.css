@@ -5965,9 +5965,7 @@ header .brand {
 
 nav.nav-primary ul.nav > li > a {
   color: transparent;
-  border-radius: 0;
-  height: 100%;
-  margin-left: 5px; }
+  height: 100%; }
 nav .sprite, nav .sprite-small, nav a[title=sprite-about], nav a[title=sprite-archive], nav a[title=sprite-store], nav .sprite-square, nav .sprite-first, nav .sprite-prev, nav .sprite-random, nav .sprite-next, nav .sprite-last {
   display: block;
   border: 1px solid transparent;
@@ -6017,6 +6015,15 @@ article.comic {
 
 body#tinymce {
   margin: 12px !important; }
+
+body > #background-washout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: -1; }
 
 header div.container {
   background-color: white;
