@@ -29,10 +29,7 @@ header {
 }
 nav {
   &.nav-primary ul.nav>li>a {
-    color: transparent;
-    // border-radius: 0;
-    height: 100%;
-    // margin-left: 5px;
+    //color: transparent;
   }
   &.sprites {
     display: inline-block;
@@ -104,14 +101,17 @@ nav {
     @extend .sprite-small;
     background-position: ($sprites-multiplier * -124px) ($sprites-multiplier * 275px);
     width: $sprites-multiplier * 90px;
+    height: $sprites-multiplier * 55px;
   }
   a[title=sprite-archive] {
     @extend .sprite-small;
     background-position: ($sprites-multiplier * -370px) ($sprites-multiplier * 278px);
+    height: $sprites-multiplier * 55px;
   }
   a[title=sprite-store] {
     @extend .sprite-small;
     background-position: ($sprites-multiplier * -203px) ($sprites-multiplier * 277px);
     width: $sprites-multiplier * 100px;
+    height: $sprites-multiplier * 55px;
   }
 }
