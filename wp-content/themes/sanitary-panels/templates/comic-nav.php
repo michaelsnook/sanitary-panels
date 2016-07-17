@@ -1,4 +1,3 @@
-<div class="col-sm-12 text-center">
 <nav class="sprites">
 
   <?php
@@ -22,4 +21,3 @@
     post_to_anchor_or_hash( $p, "sprite-last", "last" );
   ?>
 </nav>
-</div>

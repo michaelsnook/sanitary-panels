@@ -4,16 +4,17 @@
       <h1 class="entry-title"><?php the_title(); ?></h1>
       <?php get_template_part('templates/entry-meta'); ?>
     </header>
+
     <div class="entry-content text-center">
-
-      <?php get_template_part('templates/comic-nav'); ?>
-
+      <div class="col-sm-12 text-center">
+        <?php get_template_part('templates/comic-nav'); ?>
+      </div>
       <div id="the_content">
         <?php the_content(); ?>
       </div>
-
-      <?php get_template_part('templates/comic-nav'); ?>
-
+      <div class="col-sm-12 text-center">
+        <?php get_template_part('templates/comic-nav'); ?>
+      </div>
     </div><!-- .entry-content -->
 
     <?php comments_template('/templates/comments.php'); ?>
