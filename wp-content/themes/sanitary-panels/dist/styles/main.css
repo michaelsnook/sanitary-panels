@@ -1130,10 +1130,7 @@ hr {
   border: 0;
   border-top: 1px solid #eeeeee; }
 
-.sr-only, .screen-reader-text, nav#bottom-nav.expand a.nav-next,
-nav#bottom-nav.expand a.nav-prev,
-nav#bottom-nav.expand a.nav-random,
-nav#bottom-nav.expand a.nav-share {
+.sr-only, .screen-reader-text, nav#bottom-nav.expand li:not(.no-3) {
   position: absolute;
   width: 1px;
   height: 1px;
