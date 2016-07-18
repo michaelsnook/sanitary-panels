@@ -14,7 +14,7 @@ if (post_password_required()) {
 }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<section>
+<section class="comments">
   <div class="row">
     <div class="col-sm-12">
       <div class="fb-comments" data-href="http://sanitarypanels.com" data-width="600"></div>

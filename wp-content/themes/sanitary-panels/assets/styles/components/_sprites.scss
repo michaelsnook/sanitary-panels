@@ -115,7 +115,7 @@ nav {
   .sprite-square {
     @extend .sprite;
     width: $sprites-multiplier * $k * 0.72;
-    height: $sprites-multiplier * $k * 0.64;
+    height: $sprites-multiplier * $k * 0.63;
     background-size: ($sprites-multiplier * $k * 5.21) ($sprites-multiplier * $k * 3.2);
   }
   .sprite-first {
@@ -136,7 +136,7 @@ nav {
   }
   .sprite-last {
     @extend .sprite-square;
-    background-position: ($sprites-multiplier * $k * -3.28) ($sprites-multiplier * $k * 1.32);
+    background-position: ($sprites-multiplier * $k * -3.28) ($sprites-multiplier * $k * 1.30);
   }
   a[title=sprite-about] {
     @extend .sprite-small;
