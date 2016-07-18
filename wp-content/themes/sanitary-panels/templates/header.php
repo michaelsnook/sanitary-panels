@@ -23,7 +23,10 @@
 <nav id="bottom-nav" class="initial">
   <ul id="bottom-ul">
     <li class="bottom-5 no-1">
-      <a href="#" class="nav-prev">prev</a>
+      <?php
+        $p = get_previous_post(true);
+        post_to_anchor_or_hash( $p, "sprite-prev", "prev", "prev" );
+      ?>
     </li>
     <li class="bottom-5 no-2">
       <a href="#" class="nav-share">share</a>
@@ -32,29 +35,44 @@
       <a href="#" class="nav-menu">menu</a>
     </li>
     <li class="bottom-5 no-4">
-      <a href="#" class="nav-random">random</a>
+      <a href="<?= esc_url(home_url('/')); ?>random/" class="nav-random">random</a>
     </li>
     <li class="bottom-5 no-5">
-      <a href="#" class="nav-next">next</a>
+      <?php
+        $p = get_next_post(true);
+        post_to_anchor_or_hash( $p, "sprite-next", "next", "next" );
+      ?>
     </li>
   </ul>
 </nav>
 <nav id="comic-nav" class="initial">
   <ul id="comic-ul">
     <li class="bottom-5 no-1">
-      <a href="#" class="nav-first">first</a>
+      <?php
+        $p = get_boundary_post( true, '', true, 'category' );
+        post_to_anchor_or_hash( $p, "sprite-first", "first", "first" );
+      ?>
     </li>
     <li class="bottom-5 no-2">
-      <a href="#" class="nav-prev">previous</a>
+      <?php
+        $p = get_previous_post(true);
+        post_to_anchor_or_hash( $p, "sprite-prev", "prev", "prev" );
+      ?>
     </li>
     <li class="bottom-5 no-3">
-      <a href="/random/" class="nav-random">random</a>
+      <a href="<?= esc_url(home_url('/')); ?>random/" class="sprite-random">random</a>
     </li>
     <li class="bottom-5 no-4">
-      <a href="#" class="nav-next">next</a>
+      <?php
+        $p = get_next_post(true);
+        post_to_anchor_or_hash( $p, "sprite-next", "next", "next" );
+      ?>
     </li>
     <li class="bottom-5 no-5">
-      <a href="#" class="nav-first">first</a>
+      <?php
+        $p = get_boundary_post( true, '', false, 'category' );
+        post_to_anchor_or_hash( $p, "sprite-last", "last", "last" );
+      ?>
     </li>
   </ul>
 </nav>

@@ -57,10 +57,7 @@ a.nav-last {
   line-height: 54px;
 }
 nav#bottom-nav.expand {
-  a.nav-next,
-  a.nav-prev,
-  a.nav-random,
-  a.nav-share {
+  li:not(.no-3) {
     @extend .sr-only;
   }
   li.no-3 {
