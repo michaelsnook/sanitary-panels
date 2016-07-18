@@ -1252,7 +1252,7 @@ mark,
 .text-right, section.footer .sidebar .widget_search {
   text-align: right; }
 
-.text-center, ul#bottom-ul li.bottom-5, ul#social-ul li.bottom-5, ul#comic-ul li.bottom-5 {
+.text-center {
   text-align: center; }
 
 .text-justify {
@@ -5910,6 +5910,9 @@ a.addthis_counter.addthis_bubble_style {
 .fb-comments, .fb-comments * {
   width: 100% !important; }
 
+section.comments {
+  margin-top: 0; }
+
 .search-form label {
   font-weight: normal; }
 
@@ -6025,7 +6028,7 @@ nav .sprite-small, nav a[title=sprite-about], nav a[title=sprite-archive], nav a
   width: 120px; }
 nav .sprite-square, nav .sprite-first, nav .sprite-prev, nav .sprite-random, nav .sprite-next, nav .sprite-last {
   width: 72px;
-  height: 64px;
+  height: 63px;
   background-size: 521px 320px; }
 nav .sprite-first {
   background-position: -29px 132px; }
@@ -6036,7 +6039,7 @@ nav .sprite-random {
 nav .sprite-next {
   background-position: -258px 132px; }
 nav .sprite-last {
-  background-position: -328px 132px; }
+  background-position: -328px 130px; }
 nav a[title=sprite-about] {
   background-position: -124px 275px;
   width: 90px;
@@ -6057,22 +6060,23 @@ nav#bottom-nav, nav#comic-nav, nav#social-nav {
   bottom: 0;
   height: 64px;
   background-color: whiteSmoke;
-  -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+  -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 nav#comic-nav {
   bottom: 128px;
-  z-index: 998; }
+  z-index: 997; }
 
 nav#social-nav {
   bottom: 64px;
-  z-index: 997; }
+  z-index: 998; }
 
 nav#comic-nav.initial, nav#social-nav.initial:not(.out) {
   bottom: 0; }
 
 ul#bottom-ul, ul#social-ul, ul#comic-ul {
-  background-color: green;
+  background-color: white;
+  border-top: 1px solid #ddd;
   position: absolute;
   margin-bottom: 0;
   left: 0;
@@ -6082,9 +6086,12 @@ ul#bottom-ul, ul#social-ul, ul#comic-ul {
   ul#bottom-ul li.bottom-5, ul#social-ul li.bottom-5, ul#comic-ul li.bottom-5 {
     width: 20%;
     float: left;
-    min-width: 40px; }
+    min-width: 40px;
+    text-align: center; }
     ul#bottom-ul li.bottom-5 a, ul#social-ul li.bottom-5 a, ul#comic-ul li.bottom-5 a {
-      background-color: yellow; }
+      background-color: yellow;
+      margin-left: auto;
+      margin-right: auto; }
 
 a.nav-next,
 a.nav-prev,
@@ -6099,6 +6106,8 @@ a.nav-copy,
 a.nav-first,
 a.nav-last {
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -6127,8 +6136,8 @@ header div.container {
 section.footer {
   margin-bottom: 0;
   border-radius: 10px 10px 0 0;
-  padding-top: 40px;
-  padding-bottom: 40px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
   section.footer .sidebar .widget_search {
     padding-top: 2em;
     padding-bottom: 2em; }
