@@ -16,7 +16,5 @@
         <?php get_template_part('templates/comic-nav'); ?>
       </div>
     </div><!-- .entry-content -->
-
-    <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>

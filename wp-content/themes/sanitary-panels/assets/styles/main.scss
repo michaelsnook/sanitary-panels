@@ -12,12 +12,14 @@
 //@import "components/grid";
 @import "components/wp-classes";
 @import "components/sprites";
+@import "components/navs";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
 
 body>#background-washout {
     position: fixed;
@@ -27,6 +29,12 @@ body>#background-washout {
     right: 0;
     background-color: rgba(0, 0, 0, 0.65);
     z-index: -1;
+}
+@media (min-width: $screen-md-min) {
+  header .row .brand { margin-left: 117px; }
+}
+@media (min-width: $screen-lg-min) {
+  header .row .brand { margin-left: 215px; }
 }
 
 section {
@@ -43,7 +51,3 @@ main.main {
     @extend .text-muted;
   }
 }
-main.main .btn-group {
-//  min-height: 64px;
-}
-nav.above { margin-top: 15px;}

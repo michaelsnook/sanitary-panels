@@ -1,37 +1,80 @@
-$sprites: '/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png';
-$button-hover-lift-height: -5px;
+$sprites: '/wp-content/themes/sanitary-panels/dist/images/glyps-new-1000px.png';
+//$sprites: '//s3-ap-southeast-1.amazonaws.com/sanitarypanels/wp-content/uploads/2016/07/17123220/glyps-new-original.png';
 
-$sprites-multiplier: 1;
-$title-multiplier: 1;
-$logo-multiplier: 1;
+$sprites-multiplier: 1.0;
+$title-multiplier: 1.0;
+$logo-multiplier: 1.0;
+$mobile-multiplier: 1.0;
+
+$title-margin-top: ($logo-multiplier - ($title-multiplier/2));
 
 $k: 100px;
-$h: 7.83vw; // k for header items like logo and banner title
+$h: $k;
+$i: 10vw;
+$j: 76.7px;
 
 header {
   h1.title {
-    display: block;
+    float: left;
     width: $title-multiplier * $h * 5.9;
     height: $title-multiplier * $h * 1;
-    margin-left: auto;
-    margin-right: auto;
     background-image: url($sprites);
     background-size: ($title-multiplier * $h * 9.76) ($title-multiplier * $h * 6);
     background-position: ($title-multiplier * $h * -2.08) ($title-multiplier * $h * -0.39);
+    margin: 0;
+    margin-top: $title-margin-top * $h;
+    margin-left: 15px;
   }
   .brand {
-    display: block;
+    float: left;
     width: $logo-multiplier * $h * 1.14;
     height: $logo-multiplier * $h * 2;
     background-image: url($sprites);
     background-size: ($logo-multiplier * $h * 6.51) ($logo-multiplier * $h * 4);
     background-position: ($logo-multiplier * $h * -0.04) ($logo-multiplier * $h * -0.12);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
   }
 }
-nav {
+@media (max-width: $screen-sm-max) {
+  header {
+    h1.title {
+      width: $mobile-multiplier * $j * 5.9;
+      height: $mobile-multiplier * $j * 1;
+      background-size: ($mobile-multiplier * $j * 9.76) ($mobile-multiplier * $j * 6);
+      background-position: ($mobile-multiplier * $j * -2.08) ($mobile-multiplier * $j * -0.39);
+      margin-top: $mobile-multiplier * $j / 2;
+      margin-left: 15px;
+    }
+    .brand {
+      width: $mobile-multiplier * $j * 1.14;
+      height: $mobile-multiplier * $j * 2;
+      margin-left: $mobile-multiplier * $j;
+      background-size: ($mobile-multiplier * $j * 6.51) ($mobile-multiplier * $j * 4);
+      background-position: ($mobile-multiplier * $j * -0.04) ($mobile-multiplier * $j * -0.12);
+    }
+  }
+}
+@media (max-width: $screen-xs-max) {
+  header {
+    h1.title {
+      width: $mobile-multiplier * $i * 5.9;
+      height: $mobile-multiplier * $i * 1;
+      background-size: ($mobile-multiplier * $i * 9.76) ($mobile-multiplier * $i * 6);
+      background-position: ($mobile-multiplier * $i * -2.08) ($mobile-multiplier * $i * -0.39);
+      margin-top: $mobile-multiplier * $i / 2;
+      margin-left: 2.7vw;
+    }
+    .brand {
+      width: $mobile-multiplier * $i * 1.14;
+      height: $mobile-multiplier * $i * 2;
+      margin-left: $mobile-multiplier * $i;
+      background-size: ($mobile-multiplier * $i * 6.51) ($mobile-multiplier * $i * 4);
+      background-position: ($mobile-multiplier * $i * -0.04) ($mobile-multiplier * $i * -0.12);
+    }
+  }
+}
 
+nav {
   &.sprites {
     display: inline-block;
     margin-left: auto;
@@ -49,15 +92,12 @@ nav {
   .sprite {
     display: block;
     border: 1px solid transparent;
-    -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-            transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    // TODO: discuss more compatible transitions
-    &:hover {
-      margin-top: $button-hover-lift-height;
-    }
+    -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
     &[disabled] {
       opacity: 0.5;
       cursor: default;
+      &:hover { margin-top: 5; }
     }
   }
   .sprite {
