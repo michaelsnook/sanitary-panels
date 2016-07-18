@@ -1130,7 +1130,10 @@ hr {
   border: 0;
   border-top: 1px solid #eeeeee; }
 
-.sr-only, .screen-reader-text {
+.sr-only, .screen-reader-text, nav#bottom-nav.expand a.nav-next,
+nav#bottom-nav.expand a.nav-prev,
+nav#bottom-nav.expand a.nav-random,
+nav#bottom-nav.expand a.nav-share {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1252,7 +1255,7 @@ mark,
 .text-right, section.footer .sidebar .widget_search {
   text-align: right; }
 
-.text-center {
+.text-center, ul#bottom-ul li.bottom-5, ul#social-ul li.bottom-5, ul#comic-ul li.bottom-5 {
   text-align: center; }
 
 .text-justify {
@@ -1361,7 +1364,7 @@ ol {
   ol ol {
     margin-bottom: 0; }
 
-.list-unstyled, section.footer .sidebar .widget_archive ul, section.footer .sidebar .widget_search ul {
+.list-unstyled, ul#bottom-ul, ul#social-ul, ul#comic-ul, section.footer .sidebar .widget_archive ul, section.footer .sidebar .widget_search ul {
   padding-left: 0;
   list-style: none; }
 
@@ -5856,10 +5859,10 @@ button.close {
   .hidden-sm {
     display: none !important; } }
 @media (min-width: 992px) and (max-width: 1399px) {
-  .hidden-md {
+  .hidden-md, nav#bottom-nav, nav#comic-nav, nav#social-nav {
     display: none !important; } }
 @media (min-width: 1400px) {
-  .hidden-lg {
+  .hidden-lg, nav#bottom-nav, nav#comic-nav, nav#social-nav {
     display: none !important; } }
 .visible-print {
   display: none !important; }
@@ -5901,7 +5904,7 @@ button.close {
 body {
   font-size: 18px;
   background-color: black;
-  background: url("/wp-content/themes/sanitary-panels/dist/images/black-bg.png") repeat;
+  background: url("//s3-ap-southeast-1.amazonaws.com/sanitarypanels/wp-content/uploads/2016/07/17123658/black-bg.jpg") repeat;
   background-size: 27%; }
 
 a.addthis_counter.addthis_bubble_style {
@@ -5945,39 +5948,77 @@ a.addthis_counter.addthis_bubble_style {
   padding: 9px; }
 
 header h1.title {
-  display: block;
+  float: left;
   width: 590px;
   height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png");
+  background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-1000px.png");
   background-size: 976px 600px;
-  background-position: -208px -39px; }
+  background-position: -208px -39px;
+  margin: 0;
+  margin-top: 50px;
+  margin-left: 15px; }
 header .brand {
-  display: block;
+  float: left;
   width: 114px;
   height: 200px;
-  background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png");
+  background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-1000px.png");
   background-size: 651px 400px;
   background-position: -4px -12px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0; }
 
-nav.nav-primary ul.nav > li > a {
-  color: transparent;
-  height: 100%; }
+@media (max-width: 991px) {
+  header h1.title {
+    width: 452.53px;
+    height: 76.7px;
+    background-size: 748.592px 460.2px;
+    background-position: -159.536px -29.913px;
+    margin-top: 38.35px;
+    margin-left: 15px; }
+  header .brand {
+    width: 87.438px;
+    height: 153.4px;
+    margin-left: 76.7px;
+    background-size: 499.317px 306.8px;
+    background-position: -3.068px -9.204px; } }
+@media (max-width: 767px) {
+  header h1.title {
+    width: 59vw;
+    height: 10vw;
+    background-size: 97.6vw 60vw;
+    background-position: -20.8vw -3.9vw;
+    margin-top: 5vw;
+    margin-left: 2.7vw; }
+  header .brand {
+    width: 11.4vw;
+    height: 20vw;
+    margin-left: 10vw;
+    background-size: 65.1vw 40vw;
+    background-position: -0.4vw -1.2vw; } }
+nav.sprites {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 74px; }
+  nav.sprites a {
+    color: transparent;
+    border-radius: 4px;
+    margin: 5px;
+    float: left;
+    display: inline-block; }
+  nav.sprites a:hover {
+    margin-top: 0; }
 nav .sprite, nav .sprite-small, nav a[title=sprite-about], nav a[title=sprite-archive], nav a[title=sprite-store], nav .sprite-square, nav .sprite-first, nav .sprite-prev, nav .sprite-random, nav .sprite-next, nav .sprite-last {
   display: block;
   border: 1px solid transparent;
-  -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-  nav .sprite:hover, nav .sprite-small:hover, nav a[title=sprite-about]:hover, nav a[title=sprite-archive]:hover, nav a[title=sprite-store]:hover, nav .sprite-square:hover, nav .sprite-first:hover, nav .sprite-prev:hover, nav .sprite-random:hover, nav .sprite-next:hover, nav .sprite-last:hover {
-    margin-top: -5px; }
+  -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1); }
   nav .sprite[disabled], nav [disabled].sprite-small, nav a[disabled][title=sprite-about], nav a[disabled][title=sprite-archive], nav a[disabled][title=sprite-store], nav [disabled].sprite-square, nav [disabled].sprite-first, nav [disabled].sprite-prev, nav [disabled].sprite-random, nav [disabled].sprite-next, nav [disabled].sprite-last {
     opacity: 0.5;
     cursor: default; }
+    nav .sprite[disabled]:hover, nav [disabled].sprite-small:hover, nav a[disabled][title=sprite-about]:hover, nav a[disabled][title=sprite-archive]:hover, nav a[disabled][title=sprite-store]:hover, nav [disabled].sprite-square:hover, nav [disabled].sprite-first:hover, nav [disabled].sprite-prev:hover, nav [disabled].sprite-random:hover, nav [disabled].sprite-next:hover, nav [disabled].sprite-last:hover {
+      margin-top: 5; }
 nav .sprite, nav .sprite-small, nav a[title=sprite-about], nav a[title=sprite-archive], nav a[title=sprite-store], nav .sprite-square, nav .sprite-first, nav .sprite-prev, nav .sprite-random, nav .sprite-next, nav .sprite-last {
-  background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-original.png");
+  background-image: url("/wp-content/themes/sanitary-panels/dist/images/glyps-new-1000px.png");
   background-size: 651px 400px;
   width: 90px;
   height: 80px;
@@ -6001,17 +6042,111 @@ nav .sprite-last {
   background-position: -328px 132px; }
 nav a[title=sprite-about] {
   background-position: -124px 275px;
-  width: 90px; }
+  width: 90px;
+  height: 55px; }
 nav a[title=sprite-archive] {
-  background-position: -370px 278px; }
+  background-position: -370px 278px;
+  height: 55px; }
 nav a[title=sprite-store] {
   background-position: -203px 277px;
-  width: 100px; }
+  width: 100px;
+  height: 55px; }
+
+nav#bottom-nav, nav#comic-nav, nav#social-nav {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  background-color: whiteSmoke;
+  -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+nav#comic-nav {
+  bottom: 128px;
+  z-index: 998; }
+
+nav#social-nav {
+  bottom: 64px;
+  z-index: 997; }
+
+nav#comic-nav.initial, nav#social-nav.initial:not(.out) {
+  bottom: 0; }
+
+ul#bottom-ul, ul#social-ul, ul#comic-ul {
+  background-color: green;
+  position: absolute;
+  margin-bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+  ul#bottom-ul li.bottom-5, ul#social-ul li.bottom-5, ul#comic-ul li.bottom-5 {
+    width: 20%;
+    float: left;
+    min-width: 40px; }
+    ul#bottom-ul li.bottom-5 a, ul#social-ul li.bottom-5 a, ul#comic-ul li.bottom-5 a {
+      background-color: yellow; }
+
+a.nav-next,
+a.nav-prev,
+a.nav-menu,
+a.nav-random,
+a.nav-share,
+a.nav-facebook,
+a.nav-twitter,
+a.nav-whatsapp,
+a.nav-email,
+a.nav-copy,
+a.nav-first,
+a.nav-last {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 54px; }
+
+nav#bottom-nav.expand li.no-3 {
+  margin-left: 40%; }
+
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 64px; }
+
+  header nav.nav-primary, div.entry-content nav.sprites {
+    display: none; } }
+header div.container {
+  background-color: white;
+  border-radius: 0 0 10px 10px; }
+  header div.container nav.nav-primary ul.nav {
+    background-color: transparent;
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto; }
+    header div.container nav.nav-primary ul.nav > li > a:hover {
+      background-color: transparent; }
+
+section.footer {
+  margin-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  section.footer .sidebar .widget_search {
+    padding-top: 2em;
+    padding-bottom: 2em; }
+  section.footer .sidebar .widget {
+    display: none; }
+  section.footer .sidebar .widget_archive, section.footer .sidebar .widget_search {
+    display: block; }
 
 article.comic {
   padding-top: 20px; }
   article.comic header {
     display: none; }
+
+.single-format-image main.main .wp-caption {
+  border: 0px solid transparent; }
 
 body#tinymce {
   margin: 12px !important; }
@@ -6025,59 +6160,22 @@ body > #background-washout {
   background-color: rgba(0, 0, 0, 0.65);
   z-index: -1; }
 
-header div.container {
-  background-color: white;
-  border-radius: 0 0 10px 10px; }
-  header div.container nav.nav-primary ul.nav {
-    background-color: transparent;
-    width: 335px;
-    margin-left: auto;
-    margin-right: auto; }
-    header div.container nav.nav-primary ul.nav > li > a:hover {
-      background-color: transparent; }
-
+@media (min-width: 992px) {
+  header .row .brand {
+    margin-left: 117px; } }
+@media (min-width: 1400px) {
+  header .row .brand {
+    margin-left: 215px; } }
 section {
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px; }
-  section.footer {
-    margin-bottom: 0;
-    border-radius: 10px 10px 0 0;
-    padding-top: 40px;
-    padding-bottom: 40px; }
-    section.footer .sidebar .widget_search {
-      padding-top: 2em;
-      padding-bottom: 2em; }
-    section.footer .sidebar .widget {
-      display: none; }
-    section.footer .sidebar .widget_archive, section.footer .sidebar .widget_search {
-      display: block; }
 
 main.main {
   padding-bottom: 20px; }
   main.main figcaption {
     font-size: 15px;
     text-align: left; }
-  .single-format-image main.main .wp-caption {
-    border: 0px solid transparent; }
-  main.main .btn-group {
-    min-height: 64px; }
-
-nav.sprites {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 74px; }
-  nav.sprites.above {
-    margin-top: 15px; }
-  nav.sprites a {
-    color: transparent;
-    border-radius: 4px;
-    margin: 5px;
-    float: left;
-    display: inline-block; }
-  nav.sprites a:hover {
-    margin-top: 0; }
 
 /*# sourceMappingURL=main.css.map */
