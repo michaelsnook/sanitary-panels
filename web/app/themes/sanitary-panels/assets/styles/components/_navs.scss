@@ -1,0 +1,133 @@
+$nav-border-color: #ddd;
+
+nav#bottom-nav, nav#comic-nav, nav#social-nav, nav#other-nav {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: white;
+  -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  bottom: 0;
+  @media (min-width: 992px) {
+    bottom: -64px;
+  }
+}
+
+nav#other-nav {
+  height: 64px;
+  z-index: 996;
+  &.expand {
+    bottom: 0;
+    height: 100vh;
+    padding-bottom: 64px;
+  }
+  .container > .row > .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  ul#other-ul {
+    width: 100vw;
+    @extend .text-center;
+    li.vertical {
+      margin-top: 20px;
+    }
+  }
+}
+
+.single-post nav#other-nav {
+  &.expand {
+    padding-bottom: 192px;
+  }
+}
+nav#comic-nav {
+  &.expand { bottom: 128px; }
+  z-index: 900;
+}
+.single-post nav#comic-nav {
+  &.expand { bottom: 128px; }
+  z-index: 997;
+}
+nav#social-nav {
+  z-index: 900;
+}
+.single-post nav#social-nav {
+  &.expand, &.btf-on, &.out { bottom: 64px; }
+  @media (min-width: 992px) {
+    &.btf-on { bottom: -64px; }
+  }
+  z-index: 998;
+}
+%nav-li {
+  width: 20%;
+  height: 63px;
+  float: left;
+  min-width: 40px;
+  text-align: center;
+  padding: 10px;
+}
+ul#other-ul, ul#bottom-ul, ul#social-ul, ul#comic-ul {
+  @extend .list-unstyled;
+  border-top: 1px solid $nav-border-color;
+  margin-bottom: 0;
+  width: 100%;
+  li.bottom-5 { @extend %nav-li; }
+}
+#social-ul-desktop {
+  @extend .list-unstyled, .clearfix;
+  li { @extend %nav-li; width: 78.55px; }
+  &-wrap {
+    @extend .text-center, .hidden-xs, .hidden-sm;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: $border-radius-base;
+    width: 236px;
+
+  }
+}
+#follow-ul-mobile {
+  @extend .list-unstyled, .clearfix;
+  li { @extend %nav-li; width: 78.55px; }
+  &-wrap {
+    @extend .text-center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 158px;
+    padding-top: 10px;
+    border-top: 1px solid $nav-border-color;
+  }
+}
+nav#bottom-nav.expand {
+  li.no-1, li.no-2, li.no-4, li.no-5 {
+    @extend .sr-only;
+  }
+  li.no-3 {
+    margin-left: 40%;
+  }
+}
+
+// for the [ first / prev / random / next / last ] nav on desktops
+ul.nav-with-text, ul.top-nav-text {
+  @extend .list-unstyled, .list-inline;
+}
+
+// For the [about / archive / store] nav up top
+// I can't actually add my own nav-sprite classes, so I'm extending them
+a[title=sprite-about] {
+  @extend .nav-about;
+}
+a[title=sprite-archive] {
+  @extend .nav-archive;
+}
+a[title=sprite-store] {
+  @extend .nav-store;
+}
+ul.top-nav-text {
+  margin-top: -45px;
+  margin-left: 36px;
+  li {
+    margin-left: 5px;
+  }
+}

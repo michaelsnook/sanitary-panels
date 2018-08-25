@@ -1,0 +1,17 @@
+.sidebar {
+  @extend .text-muted;
+  .widget_search {
+    @extend .pull-right, .text-right;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .widget {
+    // display: none;
+  }
+  .widget_archive, .widget_search {
+    @extend .col-sm-6; display: block;
+    ul {
+      @extend .list-unstyled;
+    }
+  }
+}

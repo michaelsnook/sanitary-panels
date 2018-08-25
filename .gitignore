@@ -18,3 +18,9 @@ web/.htaccess
 # Composer
 vendor/*
 !vendor/.gitkeep
+
+# Assets
+web/app/themes/sanitary-panels/.sass-cache
+web/app/themes/sanitary-panels/dist
+web/app/themes/sanitary-panels/bower_components
+web/app/themes/sanitary-panels/node_modules

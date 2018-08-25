@@ -1,0 +1,14 @@
+body.archive.category {
+  main article {
+    time {
+      @extend .small, .text-muted;
+      font-style: italic;
+    }
+    p.byline.author.vcard {
+      @extend .hidden;
+    }
+    .entry-title {
+      margin-bottom: 0;
+    }
+  }
+}

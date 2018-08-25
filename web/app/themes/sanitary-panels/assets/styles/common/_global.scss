@@ -1,0 +1,54 @@
+body {
+  font-size: 18px;
+  background-color: $background-color;
+  background: url($background-image) repeat;
+  background-size: 27%;
+}
+@media (max-width: $screen-xs-max) {
+  #comic .col-sm-12, header#header .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #comments {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+@media (max-width: $screen-sm-max) {
+  body {
+    padding-bottom: 64px;
+    &.btf-on { padding-bottom: 128px; }
+  }
+  .nav-body, .top-nav-text {
+    display: none;
+  }
+}
+#background-washout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(40, 40, 40, 0.8);
+  z-index: -1;
+}
+.old-browser-alert {
+  margin: 20px;
+  @extend .alert, .alert-danger;
+}
+main .wrap.container {
+  padding: 30px;
+  .page-header h1 { margin-top: 0; }
+}
+.wrap {
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  border-radius: $border-radius-large;
+  background-color: white;
+}
+.page-header { margin-top: 0; }

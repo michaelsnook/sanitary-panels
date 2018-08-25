@@ -1,0 +1,139 @@
+$n: 0.6px;
+$nt: 0.8px;
+
+.nav-sprite {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-image: url($nav-glyphs);
+  border: 0px solid transparent;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  &, &:hover, &:focus, &:link, &:visited, &:active { color: transparent; }
+  &[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+.nav-sprite-sm {
+  background-size: (536 * $n) (643 * $n);
+  height: 71.7 * $n;
+  width: 85.7 * $n;
+}
+.nav-sprite-md {
+  background-size: (536 * $nt) (643 * $nt);
+  height: 71.7 * $nt;
+  width: 85.7 * $nt;
+}
+.nav-sprite-flat {
+  background-size: (536 * $nt) (643 * $nt);
+  height: 32 * $nt;
+  width: 95 * $nt;
+}
+
+// main comic nav for desktops
+.nav-first-text {
+  @extend .nav-sprite, .nav-sprite-md;
+  background-position: (524 * $nt) (617 * $nt);
+}
+.nav-prev-text {
+  @extend .nav-sprite, .nav-sprite-md;
+  background-position: (415 * $nt) (615 * $nt);
+}
+.nav-random-text {
+  @extend .nav-sprite, .nav-sprite-md;
+  background-position: (302 * $nt) (615 * $nt);
+}
+.nav-next-text {
+  @extend .nav-sprite, .nav-sprite-md;
+  background-position: (206 * $nt) (615 * $nt);
+}
+.nav-last-text {
+  @extend .nav-sprite, .nav-sprite-md;
+  background-position: (98 * $nt) (614 * $nt);
+}
+
+// main comic nav on mobiles
+.nav-first {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (509 * $n) (204 * $n);
+}
+.nav-prev {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (405 * $n) (202 * $n);
+}
+.nav-random {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (297 * $n) (205 * $n);
+}
+.nav-next {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (195 * $n) (202 * $n);
+}
+.nav-last {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (88 * $n) (204 * $n);
+}
+
+// misc
+.nav-share {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (409 * $n) (313 * $n);
+}
+.nav-menu {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (198 * $n) (315 * $n);
+}
+
+// social buttons
+.nav-facebook {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (527 * $n) (423 * $n);
+}
+.nav-twitter {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (401 * $n) (423 * $n);
+}
+.nav-whatsapp {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (302 * $n) (432 * $n);
+}
+.nav-email {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (198 * $n) (426 * $n);
+}
+.nav-copy {
+  @extend .nav-sprite, .nav-sprite-sm;
+  background-position: (97 * $n) (430 * $n);
+}
+
+// text-only menu items
+.nav-about {
+  @extend .nav-sprite, .nav-sprite-flat;
+  background-position: (519 * $nt) (104 * $nt);
+}
+.nav-archive {
+  @extend .nav-sprite, .nav-sprite-flat;
+  background-position: (410 * $nt) (46 * $nt);
+}
+.nav-store {
+  @extend .nav-sprite, .nav-sprite-flat;
+  background-position: (521 * $nt) (71 * $nt);
+}
+.nav-comic {
+  @extend .nav-sprite, .nav-sprite-flat;
+  background-position: (405 * $nt) (109 * $nt);
+}
+.nav-home {
+  @extend .nav-sprite, .nav-sprite-flat;
+  background-position: (415 * $nt) (73 * $nt);
+}
+.nav-contact {
+  @extend .nav-sprite, .nav-sprite-flat;
+  background-position: (512 * $nt) (41 * $nt);
+}

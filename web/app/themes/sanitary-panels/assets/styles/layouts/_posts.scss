@@ -1,0 +1,36 @@
+#comic {
+  ul { margin-bottom: 0; }
+  .main { padding: 0; }
+  article.comic  {
+    header { display: none; }
+    #the_content img {
+      @extend .img-responsive;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    figcaption {
+      font-size: 15px;
+      text-align: left;
+      @extend .text-muted;
+    }
+    .entry-content {
+      p {
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+        // the next 6 lines are the hackiest part of this whole theme
+        // they only work properly if the comic is the first p in the post
+        padding-left: 4vw;
+        padding-right: 4vw;
+        &:first-child {
+          margin-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+.single-format-image .main {
+  .wp-caption { border: 0px solid transparent; }
+}

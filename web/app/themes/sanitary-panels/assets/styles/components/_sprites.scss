@@ -1,0 +1,71 @@
+$sprites-multiplier: 1.0;
+$title-multiplier: 1.0;
+$logo-multiplier: 1.0;
+$mobile-multiplier: 1.0;
+
+$title-margin-top: 0.75 * ($logo-multiplier - ($title-multiplier/2));
+
+$iw: 765; // image width
+$ih: 294; // image height
+
+
+$k: 100px;
+$h: $k;
+$i: 10vw;
+$j: 76.7px;
+
+h1.title {
+  float: left;
+  color: transparent;
+  width: $title-multiplier * $h * 5.9;
+  height: $title-multiplier * $h * 1;
+  background-image: url($sprites);
+  background-size: ($title-multiplier * $h * 7.65) ($title-multiplier * $h * 2.94);
+  background-position: ($title-multiplier * $h * -1.73) ($title-multiplier * $h * -0.33);
+  margin: 0;
+  margin-top: $title-margin-top * $h;
+  margin-left: 15px;
+}
+.brand {
+  float: left;
+  width: $logo-multiplier * $h * 1.14;
+  height: $logo-multiplier * $h * 2;
+  background-image: url($sprites);
+  background-size: ($logo-multiplier * $h * 5.1) ($logo-multiplier * $h * 1.96);
+  background-position: ($logo-multiplier * $h * 0) ($logo-multiplier * $h * 0);
+  margin: 0;
+}
+@media (max-width: $screen-sm-max) {
+  h1.title {
+    width: $mobile-multiplier * $j * 5.9;
+    height: $mobile-multiplier * $j * 1;
+    background-size: ($mobile-multiplier * $j * 7.65) ($mobile-multiplier * $j * 2.94);
+    background-position: ($mobile-multiplier * $j * -1.73) ($mobile-multiplier * $j * -0.33);
+    margin-top: $mobile-multiplier * $j / 2;
+    margin-left: 15px;
+  }
+  .brand {
+    width: $mobile-multiplier * $j * 1.14;
+    height: $mobile-multiplier * $j * 2;
+    margin-left: $mobile-multiplier * $j;
+    background-size: ($mobile-multiplier * $j * 5.1) ($mobile-multiplier * $j * 1.96);
+    background-position: ($mobile-multiplier * $j * 0) ($mobile-multiplier * $j * 0);
+  }
+}
+@media (max-width: $screen-xs-max) {
+  h1.title {
+    width: $mobile-multiplier * $i * 5.9;
+    height: $mobile-multiplier * $i * 1;
+    background-size: ($mobile-multiplier * $i * 7.65) ($mobile-multiplier * $i * 2.94);
+    background-position: ($mobile-multiplier * $i * -1.73) ($mobile-multiplier * $i * -0.33);
+    margin-top: $mobile-multiplier * $i / 2;
+    margin-left: 2.7vw;
+  }
+  .brand {
+    width: $mobile-multiplier * $i * 1.14;
+    height: $mobile-multiplier * $i * 2;
+    margin-left: $mobile-multiplier * $i;
+    background-size: ($mobile-multiplier * $i * 5.1) ($mobile-multiplier * $i * 1.96);
+    background-position: ($mobile-multiplier * $i * 0) ($mobile-multiplier * $i * 0);
+  }
+}
