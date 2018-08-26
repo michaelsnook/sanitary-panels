@@ -13,7 +13,7 @@
       ?>
     </li>
     <li>
-      <a class="nav-random-text" href="<?php echo get_bloginfo('wpurl'); ?>/random/" rel="random">random</a>
+      <a class="nav-random-text" href="<?php echo get_bloginfo('url'); ?>/random/" rel="random">random</a>
     </li>
     <li>
       <?php
