@@ -56,13 +56,34 @@ function post_to_anchor_or_hash($p, $classnames = '', $rel = '', $text= '') {
 
 add_action( 'template_redirect', 'last_comic_redirect' );
 
-function last_comic_redirect(){
+function last_comic_redirect() {
   if (is_front_page()) {
-    $posts = get_posts('posts_per_page=1&category_name=comics&suppress_filters=false');
-    $post = $posts[0];
+    $post = get_posts('posts_per_page=1&category_name=comics&suppresss_filters=false')[0];
     wp_safe_redirect(get_permalink($post)); exit;
   }
 }
+
+// listens for the "/random/" URL and redirects to a random post
+// TODO: check whether add_action 'init' is the right way to hook in
+
+add_action( 'init', function() {
+  if ($_SERVER['REQUEST_URI'] == '/random/') {
+		header('Cache-Control: no-cache, no-store, must-revalidate'); // HTTP 1.1.
+    header('Pragma: no-cache'); // HTTP 1.0.
+    header('Expires: Thu, 01 Jan 1970 00:00:00 GMT'); // Proxies.
+    header('X-Robots-Tag: noindex'); // Web Spiders
+		$post = get_posts(array(
+			'posts_per_page' => 1,
+			'category_name' => 'comics',
+			'post_type' => 'post',
+			'post_status' => 'publish',
+			'suppress_filters' => true,
+			'orderby' => 'rand'
+		))[0];
+		wp_safe_redirect(get_permalink($post)); exit;
+  }
+});
+
 
 // remove wp emoji settings and related code to clean up <head>
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
