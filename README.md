@@ -7,10 +7,9 @@ System Dependencies
 -------------------
 Always run `apt update` before installing dependencies.
 
-1. PHP 5.6 or 7
+1. PHP 7
 1. MySQL
-1. NPM to build assets
-1. Install Gulp, Bower
+1. NPM 8
 
 
 Setup Steps
@@ -18,7 +17,7 @@ Setup Steps
 1. Clone this repository
 1. See BEDROCK.md to learn more about it
 1. Build dependencies with `composer install`
-1. In the theme folder run `npm install && bower install` the first time, and then you can `gulp` or `gulp --watch` to compile assets
+1. In the theme folder run `npm install && npm run build`
 1. `cp .env.example .env`; add database credentials and salts
 1. Point your server at the /web directory
 1. Install WordPress by visiting the link
