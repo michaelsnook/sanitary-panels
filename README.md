@@ -31,3 +31,5 @@ Inside the WP Admin
 1. Set the Permalink type to `/sample-post/` (aka `/%postname%/).
   1. If the .htaccess file is not writeable, you will need to paste in some content at the bottom of this screen.
 1. Create a menu with items for "About", "Archive" and "Store", and give them the title attributes `sprite-about`, `sprite-archive` and `sprite-store`. Check the box for "Primary Navigation" to activate some hacky styling found in _sprites.css. (See screencap in docs/.)
+1. Date format is the default `jS F Y`
+1. Disable comments site-wide (they're handled by FB comments via Javascript)
