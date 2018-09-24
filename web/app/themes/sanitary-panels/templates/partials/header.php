@@ -1,8 +1,8 @@
-<div class="container wrap">
+<div class="container">
   <div class="row">
     <div class="col-sm-12 col-md-12">
-      <a class="brand" title="<?php bloginfo('name'); ?>" href="<?= esc_url(home_url('/')); ?>"></a>
-      <h1 class="title">Sanitary Panels</h1>
+      <a class="brand brand-dark" title="<?php bloginfo('name'); ?>" href="<?= esc_url(home_url('/')); ?>"></a>
+      <h1 class="title title-dark">Sanitary Panels</h1>
     </div>
   </div>
   <div class="row">
