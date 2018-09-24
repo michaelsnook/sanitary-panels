@@ -8,14 +8,17 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "imagemin": "^6.0.0"
+    "imagemin": "^6.0.0",
+    "node-sass": "^4.9.3"
   },
   "devDependencies": {
-    "node-sass": "^4.9.3"
+    "imagemin-cli": "^3.0.0"
   },
   "scripts": {
     "test": "npm run test",
-    "scss": "node-sass assets/styles/main.scss -o dist/styles"
+    "scss": "node-sass assets/styles/main.scss -o dist/styles",
+    "images": "imagemin assets/images/** --out-dir=dist/images",
+    "build": "node-sass assets/styles/main.scss -o dist/styles && imagemin assets/images/** --out-dir=dist/images"
   },
   "repository": {
     "type": "git",
