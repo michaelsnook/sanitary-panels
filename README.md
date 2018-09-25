@@ -9,7 +9,7 @@ Always run `apt update` before installing dependencies.
 
 1. PHP 7
 1. MySQL
-1. NPM 8
+1. NPM 8+
 
 
 Setup Steps
@@ -32,3 +32,6 @@ Inside the WP Admin
 1. Create a menu with items for "About", "Archive" and "Store", and give them the title attributes `sprite-about`, `sprite-archive` and `sprite-store`. Check the box for "Primary Navigation" to activate some hacky styling found in _sprites.css. (See screencap in docs/.)
 1. Date format is the default `jS F Y`
 1. Disable comments site-wide (they're handled by FB comments via Javascript)
+1. Enable the plugins!
+  1. To make the Autoptimize plugin work, you need to create a directory `web/app/cache` and `web/app/cache/autoptimize` and then `chown www-data:www-data web/app/cache/autoptimize` so the Autoptimize plugin can write minified CSS and JS to the cache folder.
+1. Under "Media" in the WP admin, set "Large size images" to have a max width of `780`, and max height of `1560`.
