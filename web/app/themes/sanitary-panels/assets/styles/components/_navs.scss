@@ -84,7 +84,11 @@ ul#other-ul, ul#bottom-ul, ul#social-ul, ul#comic-ul {
     background-color: white;
     border-radius: $border-radius-base;
     width: 236px;
-
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 30px;
+    }
   }
 }
 #follow-ul-mobile {
