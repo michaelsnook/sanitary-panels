@@ -11,7 +11,6 @@ Always run `apt update` before installing dependencies.
 1. MySQL
 1. NPM 8+
 
-
 Setup Steps
 -----------
 1. Clone this repository
