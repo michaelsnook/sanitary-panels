@@ -48,12 +48,13 @@ use Roots\Sage\Wrapper;
         <div class="row">
           <?php
             /*if (Setup\display_sidebar()) :*/
+            if (0) :
           ?>
           <div class="col-sm-12 sidebar">
             <?php include Wrapper\sidebar_path(); ?>
           </div><!-- /.sidebar -->
           <?php
-            /* endif; */
+            endif;
           ?>
         </div>
         <div class="row">
