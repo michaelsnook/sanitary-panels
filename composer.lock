@@ -256,19 +256,20 @@
         },
         {
             "name": "oscarotero/env",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/env.git",
-                "reference": "0f676e41d758fa984806c32e27f0cf7afa63d8db"
+                "reference": "4ab45ce5c1f2c62549208426bfa20a3d5fa008c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/env/zipball/0f676e41d758fa984806c32e27f0cf7afa63d8db",
-                "reference": "0f676e41d758fa984806c32e27f0cf7afa63d8db",
+                "url": "https://api.github.com/repos/oscarotero/env/zipball/4ab45ce5c1f2c62549208426bfa20a3d5fa008c6",
+                "reference": "4ab45ce5c1f2c62549208426bfa20a3d5fa008c6",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "php": ">=5.2"
             },
             "type": "library",
@@ -294,7 +295,7 @@
             "keywords": [
                 "env"
             ],
-            "time": "2017-07-17T20:41:59+00:00"
+            "time": "2019-04-03T18:28:43+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -413,9 +414,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/addthis.6.1.6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/addthis.6.1.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -433,9 +432,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.12.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.12.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -453,9 +450,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.4.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.4.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -473,9 +468,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -493,9 +486,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.3.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.3.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -513,9 +504,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/shortpixel-image-optimiser.4.11.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/shortpixel-image-optimiser.4.11.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -533,9 +522,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -553,9 +540,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-optimize.2.2.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-optimize.2.2.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
