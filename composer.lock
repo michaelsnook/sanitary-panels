@@ -413,9 +413,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/addthis.6.1.6.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/addthis.6.1.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -433,9 +431,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.12.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.12.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -453,9 +449,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.4.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.4.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -473,9 +467,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.1.0.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -493,9 +485,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.3.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.3.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -513,9 +503,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/shortpixel-image-optimiser.4.11.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/shortpixel-image-optimiser.4.11.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -533,9 +521,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -553,9 +539,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-optimize.2.2.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-optimize.2.2.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -567,16 +551,16 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.3.2",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "6ad28354c04b364c3c71a34e4a18b629cc3b231e"
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6ad28354c04b364c3c71a34e4a18b629cc3b231e",
-                "reference": "6ad28354c04b364c3c71a34e4a18b629cc3b231e",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
                 "shasum": ""
             },
             "require": {
@@ -609,12 +593,12 @@
                 }
             ],
             "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
             "keywords": [
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-09-23T23:08:17+00:00"
+            "time": "2021-04-09T00:54:41+00:00"
         }
     ],
     "aliases": [],
@@ -625,5 +609,6 @@
     "platform": {
         "php": ">=5.6"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
