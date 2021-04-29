@@ -1,0 +1,38 @@
+version: 2
+updates:
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: wpackagist-plugin/wordpress-seo
+    versions:
+    - "15.7"
+    - "15.8"
+    - "15.9"
+    - 15.9.1
+    - 15.9.2
+    - "16.0"
+    - 16.0.1
+    - 16.0.2
+    - "16.1"
+    - 16.1.1
+  - dependency-name: wpackagist-plugin/shortpixel-image-optimiser
+    versions:
+    - 4.21.1
+    - 4.21.2
+  - dependency-name: wpackagist-plugin/wp-optimize
+    versions:
+    - 3.1.6
+    - 3.1.7
+  - dependency-name: wpackagist-plugin/amazon-s3-and-cloudfront
+    versions:
+    - 2.5.2
+  - dependency-name: wpackagist-plugin/autoptimize
+    versions:
+    - 2.8.1
+  - dependency-name: squizlabs/php_codesniffer
+    versions:
+    - 3.5.8
